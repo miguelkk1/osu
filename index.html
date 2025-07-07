@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OSU! - O Ritmo é o Jogo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      color: #333;
+    }
+
+    header {
+      background: #ff66aa;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #ff4081;
+      margin-bottom: 15px;
+    }
+
+    .modo {
+      background: white;
+      border-left: 5px solid #ff66aa;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .sobre-img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #topoBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 10px 15px;
+      background: #ff66aa;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+    }
+
+    a {
+      color: #ff4081;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Osu!_logo_2024.png" alt="Logo do OSU!" />
+    <h1>osu! - Precisão é tudo</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#modos">Modos</a>
+      <a href="#comecar">Como Começar</a>
+    </nav>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre o OSU!</h2>
+    <p>OSU! é um jogo de ritmo gratuito que desafia os reflexos e a coordenação dos jogadores. Inspirado em jogos como Elite Beat Agents, o objetivo é clicar, arrastar e girar os círculos no ritmo da música.</p>
+    <p>Com uma comunidade ativa e mapas criados por usuários, OSU! oferece desafios para iniciantes e veteranos. Além disso, possui ranking global e um sistema competitivo intenso!</p>
+    
+  </section>
+
+  <section id="modos">
+    <h2>Modos de Jogo</h2>
+    <div class="modo">
+      <h3>osu!standard</h3>
+      <p>O modo principal: clique nos círculos em sincronia com a batida da música.</p>
+      <video src="gameplayexemplo.mp4" autoplay muted loop playsinline width="800"></video>
+    </div>
+    <div class="modo">
+      <h3>osu!taiko</h3>
+      <p>Inspirado em tambores japoneses, você bate nos botões certos conforme os símbolos aparecem.</p>
+    </div>
+    <div class="modo">
+      <h3>osu!catch</h3>
+      <p>Você controla um personagem com um pratinho e deve capturar frutas que caem no ritmo da música.</p>
+    </div>
+    <div class="modo">
+      <h3>osu!mania</h3>
+      <p>Modo similar aos jogos de teclado musical como StepMania ou Dance Dance Revolution.</p>
+    </div>
+  </section>
+
+  <section id="comecar">
+    <h2>Como Começar</h2>
+    <p>1. Acesse o site oficial: <a href="https://osu.ppy.sh/" target="_blank">osu.ppy.sh</a></p>
+    <p>2. Baixe o jogo gratuitamente</p>
+    <p>3. Crie uma conta e explore os mapas!</p>
+    <p>4. Use o modo treino ou jogue com amigos para melhorar suas habilidades.</p>
+  </section>
+
+  <footer>
+    <p>Feito por Zezin &copy; 2025 | Este site é apenas para fins de portfólio.</p>
+  </footer>
+
+  <button id="topoBtn" onclick="voltarAoTopo()">Topo ↑</button>
+
+  <script>
+    const topoBtn = document.getElementById("topoBtn");
+
+    window.onscroll = function () {
+      topoBtn.style.display = (document.documentElement.scrollTop > 200) ? "block" : "none";
+    };
+
+    function voltarAoTopo() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
